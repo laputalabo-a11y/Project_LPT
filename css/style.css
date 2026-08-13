@@ -115,14 +115,14 @@ header h1 {
 }
 
 .menu li::before {
-    content: "├";
+    content: "笏�";
     position: absolute;
     left: 0;
     color: var(--border);
 }
 
 .menu li:last-child::before {
-    content: "└";
+    content: "笏�";
 }
 
 .menu li a {
@@ -212,9 +212,9 @@ hr {
 }
 
 .member-aki { color: var(--aki); }
-.member-kouichi { color: var(--kouichi); }
-.member-junji { color: var(--junji); }
-.member-tomoi { color: var(--tomoi); }
+.member-Kouichi { color: var(--kouichi); }
+.member-Junji { color: var(--junji); }
+.member-Tomoi { color: var(--tomoi); }
 
 .bg-aki { background-color: var(--aki); }
 .bg-kouichi { background-color: var(--kouichi); color: var(--junji); }
