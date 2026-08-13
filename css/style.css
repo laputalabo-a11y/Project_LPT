@@ -3,6 +3,23 @@
    Main Style Sheet
    ========================= */
 
+/* カラーパレット */
+
+:root {
+    --aki: #D00000;
+    --Kouichi: #FFFFFF;
+    --Junji: #000000;
+    --Tomoi: #164A7A;
+
+    --graph-bg: #282828;
+    --site-bg: #000000;
+    --accent: #C8A96B;
+
+    --text-main: #CCCCCC;
+    --text-muted: #888888;
+    --border: #555555;
+}
+
 
 /* ページ全体 */
 
@@ -10,8 +27,8 @@ body {
     margin: 0;
     padding: 20px;
 
-    background-color: #000000;
-    color: #cccccc;
+    background-color: var(--site-bg);
+    color: var(--text-main);
 
     font-family:
         "Hiragino Kaku Gothic ProN",
@@ -29,9 +46,9 @@ body {
     width: 900px;
     margin: 0 auto;
 
-    border: 1px solid #666666;
+    border: 1px solid var(--border);
 
-    background-color: #000000;
+    background-color: var(--site-bg);
 }
 
 
@@ -40,12 +57,12 @@ body {
 header {
     padding: 25px;
     text-align: center;
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid var(--border);
 }
 
 header h1 {
     margin: 0;
-    color: #ffffff;
+    color: var(--kouichi);
 
     font-family:
         "Hiragino Mincho ProN",
@@ -77,13 +94,13 @@ header h1 {
 
     padding: 20px;
 
-    border-right: 1px solid #666666;
+    border-right: 1px solid var(--border);
 
-    background-color: #000000;
+    background-color: var(--site-bg);
 }
 
 .menu h2 {
-    color: #ffffff;
+    color: var(--accent);
 
     font-size: 16px;
 
@@ -100,7 +117,7 @@ header h1 {
 
     margin: 15px 0;
 
-    color: #9999ff;
+    color: var(--accent);
 
     text-decoration: none;
 
@@ -108,11 +125,11 @@ header h1 {
 }
 
 .menu a:visited {
-    color: #996699;
+    color: #A88956;
 }
 
 .menu a:hover {
-    color: #ffffff;
+    color: var(--kouichi);
 
     text-decoration: underline;
 }
@@ -129,7 +146,7 @@ header h1 {
 }
 
 .content h2 {
-    color: #ffffff;
+    color: var(--kouichi);
 
     text-align: center;
 
@@ -144,7 +161,7 @@ header h1 {
 .welcome {
     margin: 30px 0;
 
-    color: #ffffff;
+    color: var(--kouichi);
 
     font-size: 18px;
 
@@ -163,11 +180,11 @@ header h1 {
 .counter-number {
     padding: 4px 8px;
 
-    background-color: #000000;
+    background-color: var(--site-bg);
 
-    color: #00ff00;
+    color: var(--accent);
 
-    border: 1px inset #999999;
+    border: 1px inset var(--text-muted);
 
     font-family: "Courier New", monospace;
 
@@ -184,13 +201,13 @@ header h1 {
 }
 
 .news h3 {
-    color: #ffffff;
+    color: var(--kouichi);
 
     text-align: center;
 }
 
 .new {
-    color: #ff0000;
+    color: var(--aki);
 
     font-weight: bold;
 
@@ -214,7 +231,7 @@ header h1 {
 .last-update {
     text-align: right;
 
-    color: #000000;
+    color: var(--text-muted);
 
     font-family: "Courier New", monospace;
 }
@@ -227,7 +244,56 @@ hr {
 
     border: 0;
 
-    border-top: 1px dotted #666666;
+    border-top: 1px dotted var(--border);
+}
+
+
+/* グラフ */
+
+.graph,
+.chart,
+.chart-container {
+    background-color: var(--graph-bg);
+}
+
+
+/* メンバーカラー */
+
+.member-aki {
+    color: var(--aki);
+}
+
+.member-kouichi {
+    color: var(--kouichi);
+}
+
+.member-junji {
+    color: var(--junji);
+}
+
+.member-tomoi {
+    color: var(--tomoi);
+}
+
+
+/* メンバーカラー：背景 */
+
+.bg-aki {
+    background-color: var(--aki);
+}
+
+.bg-kouichi {
+    background-color: var(--kouichi);
+    color: var(--junji);
+}
+
+.bg-junji {
+    background-color: var(--junji);
+    color: var(--kouichi);
+}
+
+.bg-tomoi {
+    background-color: var(--tomoi);
 }
 
 
@@ -236,9 +302,9 @@ hr {
 footer {
     padding: 15px;
 
-    border-top: 1px solid #666666;
+    border-top: 1px solid var(--border);
 
-    color: #666666;
+    color: var(--text-muted);
 
     text-align: center;
 
