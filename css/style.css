@@ -201,7 +201,7 @@ header h1 {
 }
 
 .news h3 {
-    color: var(--kouichi);
+    color: var(--Kouichi);
 
     text-align: center;
 }
@@ -264,15 +264,15 @@ hr {
 }
 
 .member-kouichi {
-    color: var(--kouichi);
+    color: var(--Kouichi);
 }
 
 .member-junji {
-    color: var(--junji);
+    color: var(--Junji);
 }
 
 .member-tomoi {
-    color: var(--tomoi);
+    color: var(--Tomoi);
 }
 
 
@@ -282,18 +282,18 @@ hr {
     background-color: var(--aki);
 }
 
-.bg-kouichi {
-    background-color: var(--kouichi);
-    color: var(--junji);
+.bg-Kouichi {
+    background-color: var(--Kouichi);
+    color: var(--Junji);
 }
 
-.bg-junji {
-    background-color: var(--junji);
-    color: var(--kouichi);
+.bg-Junji {
+    background-color: var(--Junji);
+    color: var(--Kouichi);
 }
 
-.bg-tomoi {
-    background-color: var(--tomoi);
+.bg-Tomoi {
+    background-color: var(--Tomoi);
 }
 
 
