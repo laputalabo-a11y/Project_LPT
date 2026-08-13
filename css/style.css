@@ -3,56 +3,34 @@
    Main Style Sheet
    ========================= */
 
-/* カラーパレット */
-
 :root {
     --aki: #D00000;
-    --Kouichi: #FFFFFF;
-    --Junji: #000000;
-    --Tomoi: #164A7A;
-
+    --kouichi: #FFFFFF;
+    --junji: #000000;
+    --tomoi: #164A7A;
     --graph-bg: #282828;
     --site-bg: #000000;
     --accent: #C8A96B;
-
     --text-main: #CCCCCC;
     --text-muted: #888888;
     --border: #555555;
 }
 
-
-/* ページ全体 */
-
 body {
     margin: 0;
-    padding: 20px;
-
+    padding: 0;
     background-color: var(--site-bg);
     color: var(--text-main);
-
-    font-family:
-        "Hiragino Kaku Gothic ProN",
-        "Yu Gothic",
-        Osaka,
-        sans-serif;
-
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Osaka, sans-serif;
     font-size: 14px;
 }
 
-
-/* サイト全体 */
-
 .site {
-    width: 900px;
-    margin: 0 auto;
-
-    border: 1px solid var(--border);
-
+    width: 100%;
+    margin: 0;
+    border: none;
     background-color: var(--site-bg);
 }
-
-
-/* ヘッダー */
 
 header {
     padding: 25px;
@@ -63,192 +41,169 @@ header {
 header h1 {
     margin: 0;
     color: var(--kouichi);
-
-    font-family:
-        "Hiragino Mincho ProN",
-        "YuMincho",
-        "Yu Mincho",
-        "Times New Roman",
-        serif;
-
+    font-family: "Cormorant Garamond", "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "Times New Roman", serif;
     font-size: 48px;
-    font-weight: normal;
+    font-weight: 600;
     font-style: italic;
     letter-spacing: 5px;
-
-    text-align: center;
 }
 
-
-/* 左メニュー＋本文 */
+.site-subtitle {
+    margin: 8px 0 0;
+    color: var(--accent);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
 
 .layout {
     display: flex;
 }
 
-
-/* 左メニュー */
-
 .menu {
     width: 180px;
-
+    flex-shrink: 0;
     padding: 20px;
-
     border-right: 1px solid var(--border);
-
     background-color: var(--site-bg);
 }
 
 .menu h2 {
+    margin: 0 0 20px;
     color: var(--accent);
-
     font-size: 16px;
-
+    font-weight: normal;
     text-align: center;
-
     letter-spacing: 3px;
 }
 
-
-/* メニューリンク */
-
-.menu a {
+.menu > a {
     display: block;
-
     margin: 15px 0;
-
     color: var(--accent);
-
     text-decoration: none;
-
     font-family: "Courier New", monospace;
 }
 
-.menu a:visited {
+.menu > a:visited {
     color: #A88956;
 }
 
-.menu a:hover {
+.menu > a:hover {
     color: var(--kouichi);
-
     text-decoration: underline;
 }
 
+.menu h3 {
+    margin: 25px 0 8px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
 
-/* メインコンテンツ */
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    margin: 7px 0;
+    padding-left: 12px;
+    position: relative;
+}
+
+.menu li::before {
+    content: "├";
+    position: absolute;
+    left: 0;
+    color: var(--border);
+}
+
+.menu li:last-child::before {
+    content: "└";
+}
+
+.menu li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.menu li a:visited {
+    color: #999999;
+}
+
+.menu li a:hover {
+    color: var(--kouichi);
+    text-decoration: underline;
+}
 
 .content {
-    width: 680px;
-
+    flex: 1;
+    width: auto;
+    min-width: 0;
     min-height: 500px;
-
     padding: 30px;
+    box-sizing: border-box;
 }
 
 .content h2 {
     color: var(--kouichi);
-
     text-align: center;
-
     font-family: Georgia, "Times New Roman", serif;
-
     letter-spacing: 2px;
 }
-
-
-/* ようこそ */
 
 .welcome {
     margin: 30px 0;
-
     color: var(--kouichi);
-
     font-size: 18px;
-
     text-align: center;
 }
-
-
-/* カウンター */
 
 .counter {
     margin: 30px 0;
-
     text-align: center;
 }
 
-.counter-number {
-    padding: 4px 8px;
-
-    background-color: var(--site-bg);
-
-    color: var(--accent);
-
-    border: 1px inset var(--text-muted);
-
-    font-family: "Courier New", monospace;
-
-    font-size: 18px;
-
-    letter-spacing: 2px;
+.counter-display {
+    margin: 10px 0;
 }
-
-
-/* 更新情報 */
 
 .news {
     margin: 30px 0;
 }
 
 .news h3 {
-    color: var(--Kouichi);
-
+    color: var(--accent);
     text-align: center;
 }
 
 .new {
     color: var(--aki);
-
     font-weight: bold;
-
     animation: blink 1s step-end infinite;
 }
 
-
-/* NEW点滅 */
-
 @keyframes blink {
-
     50% {
         opacity: 0;
     }
-
 }
-
-
-/* 最終更新 */
 
 .last-update {
     text-align: right;
-
     color: var(--text-muted);
-
     font-family: "Courier New", monospace;
 }
 
-
-/* 区切り線 */
-
 hr {
     margin: 25px 0;
-
     border: 0;
-
     border-top: 1px dotted var(--border);
 }
-
-
-/* グラフ */
 
 .graph,
 .chart,
@@ -256,59 +211,49 @@ hr {
     background-color: var(--graph-bg);
 }
 
+.member-aki { color: var(--aki); }
+.member-kouichi { color: var(--kouichi); }
+.member-junji { color: var(--junji); }
+.member-tomoi { color: var(--tomoi); }
 
-/* メンバーカラー */
+.bg-aki { background-color: var(--aki); }
+.bg-kouichi { background-color: var(--kouichi); color: var(--junji); }
+.bg-junji { background-color: var(--junji); color: var(--kouichi); }
+.bg-tomoi { background-color: var(--tomoi); }
 
-.member-aki {
-    color: var(--aki);
+.external-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.member-kouichi {
-    color: var(--Kouichi);
+.link-banner {
+    max-width: 180px;
+    height: auto;
 }
 
-.member-junji {
-    color: var(--Junji);
+.text-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: "Courier New", monospace;
 }
 
-.member-tomoi {
-    color: var(--Tomoi);
+.text-link:hover {
+    color: var(--kouichi);
+    text-decoration: underline;
 }
-
-
-/* メンバーカラー：背景 */
-
-.bg-aki {
-    background-color: var(--aki);
-}
-
-.bg-Kouichi {
-    background-color: var(--Kouichi);
-    color: var(--Junji);
-}
-
-.bg-Junji {
-    background-color: var(--Junji);
-    color: var(--Kouichi);
-}
-
-.bg-Tomoi {
-    background-color: var(--Tomoi);
-}
-
-
-/* フッター */
 
 footer {
     padding: 15px;
-
     border-top: 1px solid var(--border);
-
     color: var(--text-muted);
-
     text-align: center;
-
     font-family: "Courier New", monospace;
-
     font-size: 11px;
+}
+
+footer p {
+    margin: 8px 0;
 }
