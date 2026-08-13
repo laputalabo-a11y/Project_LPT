@@ -1,0 +1,248 @@
+/* =========================
+   Project LPT
+   Main Style Sheet
+   ========================= */
+
+
+/* ページ全体 */
+
+body {
+    margin: 0;
+    padding: 20px;
+
+    background-color: #000000;
+    color: #cccccc;
+
+    font-family:
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        Osaka,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* サイト全体 */
+
+.site {
+    width: 900px;
+    margin: 0 auto;
+
+    border: 1px solid #666666;
+
+    background-color: #000000;
+}
+
+
+/* ヘッダー */
+
+header {
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #666666;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+
+    font-family:
+        "Hiragino Mincho ProN",
+        "YuMincho",
+        "Yu Mincho",
+        "Times New Roman",
+        serif;
+
+    font-size: 48px;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 5px;
+
+    text-align: center;
+}
+
+
+/* 左メニュー＋本文 */
+
+.layout {
+    display: flex;
+}
+
+
+/* 左メニュー */
+
+.menu {
+    width: 180px;
+
+    padding: 20px;
+
+    border-right: 1px solid #666666;
+
+    background-color: #000000;
+}
+
+.menu h2 {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    letter-spacing: 3px;
+}
+
+
+/* メニューリンク */
+
+.menu a {
+    display: block;
+
+    margin: 15px 0;
+
+    color: #9999ff;
+
+    text-decoration: none;
+
+    font-family: "Courier New", monospace;
+}
+
+.menu a:visited {
+    color: #996699;
+}
+
+.menu a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+
+/* メインコンテンツ */
+
+.content {
+    width: 680px;
+
+    min-height: 500px;
+
+    padding: 30px;
+}
+
+.content h2 {
+    color: #ffffff;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    letter-spacing: 2px;
+}
+
+
+/* ようこそ */
+
+.welcome {
+    margin: 30px 0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+
+/* カウンター */
+
+.counter {
+    margin: 30px 0;
+
+    text-align: center;
+}
+
+.counter-number {
+    padding: 4px 8px;
+
+    background-color: #000000;
+
+    color: #00ff00;
+
+    border: 1px inset #999999;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+}
+
+
+/* 更新情報 */
+
+.news {
+    margin: 30px 0;
+}
+
+.news h3 {
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.new {
+    color: #ff0000;
+
+    font-weight: bold;
+
+    animation: blink 1s step-end infinite;
+}
+
+
+/* NEW点滅 */
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* 最終更新 */
+
+.last-update {
+    text-align: right;
+
+    color: #000000;
+
+    font-family: "Courier New", monospace;
+}
+
+
+/* 区切り線 */
+
+hr {
+    margin: 25px 0;
+
+    border: 0;
+
+    border-top: 1px dotted #666666;
+}
+
+
+/* フッター */
+
+footer {
+    padding: 15px;
+
+    border-top: 1px solid #666666;
+
+    color: #666666;
+
+    text-align: center;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 11px;
+}
