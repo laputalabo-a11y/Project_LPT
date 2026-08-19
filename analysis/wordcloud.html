@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laputaの歌詞をワードクラウドで見る | Project LPT</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+<style>
+.analysis-page h2,
+.analysis-page h3 {
+    color: #fff;
+    border-left: 4px solid #c9a227;
+    padding-left: 10px;
+}
+
+.wordcloud-note {
+    font-size: 0.82em;
+    line-height: 1.7;
+    color: #aaa;
+}
+
+.ranking-note {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.figure img {
+    max-width: 100%;
+    height: auto;
+}
+.section-break {
+    height: 3.5em;
+}
+
+.small-section {
+    font-size: 0.9em;
+}
+</style>
+
+</head>
+
+<body class="frame-page">
+
+<main class="frame-content analysis-page">
+
+    <h2>Laputaの歌詞をワードクラウドで見る</h2>
+
+    <p>
+        LaputaのCD音源としてクレジットされている115曲のうち、
+        <strong>歌詞が確認できない5曲を除き、歌詞が有効と判断された110曲</strong>を対象に、
+        歌詞に登場する言葉を集計し、ワードクラウドを作成した。
+    </p>
+
+    <p class="wordcloud-note">
+        ※「私が消える」を含む。「舌」は「硝子の肖像」のシングル版では歌詞の表記がすべてカタカナであるため、
+        「Coupling Collection + xxxk [1996-1999 Singles]」に収録されている「～00mix」バージョンの歌詞を採用した。
+        「Insatiable」は同じ曲名でも歌詞が異なる部分が多いため、
+        「眩～めまい～暈」バージョンと「眩めく廃人」バージョンをそれぞれ1曲としてカウントした。
+    </p>
+
+    <p>
+        ワードクラウドでは、出現回数の多い言葉ほど大きく表示される。
+    </p>
+
+    <p>
+        実際に集計してみると、「夢」「中」「今」「ない」「空」「人」「見る」「全て」「何」など、
+        さまざまな言葉が上位に並んだ。
+    </p>
+
+    <p>
+        また、品詞ごとに分けてみると、それぞれ違った特徴が現れる。
+    </p>
+
+    <p>
+        ここで大きく表示されている言葉が、そのままLaputaの歌詞における「重要な言葉」を意味するわけではない。
+        歌詞全体を一つのデータとして眺めることで、普段聴いているだけでは気づきにくい言葉の傾向を見るための、
+        一つの方法として捉えている。
+    </p>
+
+    <p>
+        <strong>言葉を一つずつ読むのとは少し違った角度から、Laputaの歌詞全体を眺めてみる。</strong>
+    </p>
+
+    <h3>ワードクラウド</h3>
+
+    <h3>総合</h3>
+
+    <p>
+        名詞・動詞・形容詞を合わせた、歌詞全体のワードクラウド。<br>
+        （名詞・動詞・形容詞の合計。Englishは除く。）
+    </p>
+
+    <figure class="figure">
+        <img src="../images/analysis/Laputa_WordCloud_all.png"
+             alt="Laputaの歌詞110曲の総合ワードクラウド">
+        <figcaption>Laputaの歌詞110曲・総合ワードクラウド</figcaption>
+    </figure>
+
+    <h3>名詞</h3>
+
+    <p>
+        Laputaの歌詞に登場する名詞の出現傾向。
+    </p>
+
+    <figure class="figure">
+        <img src="../images/analysis/Laputa_WordCloud_noun.png"
+             alt="Laputaの歌詞110曲の名詞ワードクラウド">
+        <figcaption>名詞のワードクラウド</figcaption>
+    </figure>
+
+    <h3>動詞</h3>
+
+    <p>
+        歌詞の中で描かれる動作や変化に注目したワードクラウド。
+    </p>
+
+    <figure class="figure">
+        <img src="../images/analysis/Laputa_WordCloud_verb.png"
+             alt="Laputaの歌詞110曲の動詞ワードクラウド">
+        <figcaption>動詞のワードクラウド</figcaption>
+    </figure>
+
+    <h3>形容詞</h3>
+
+    <p>
+        歌詞の中で描かれる感情や状態を表す言葉に注目したワードクラウド。
+    </p>
+
+    <figure class="figure">
+        <img src="../images/analysis/Laputa_WordCloud_adj.png"
+             alt="Laputaの歌詞110曲の形容詞ワードクラウド">
+        <figcaption>形容詞のワードクラウド</figcaption>
+    </figure>
+
+    <h3>English</h3>
+
+    <p>
+        歌詞中に登場する英単語の出現回数をランキングにしたもの。
+    </p>
+
+    <figure class="figure">
+        <img src="../images/analysis/Laputa_WordCloud_EN.png"
+             alt="Laputaの歌詞110曲の英単語ランキング">
+        <figcaption>English　英単語の出現回数ランキング</figcaption>
+    </figure>
+
+    <div class="section-break"></div>
+    <div class="small-section">
+    <h3>このワードクラウドから</h3>
+
+    <p>
+        110曲の歌詞を集計し、出現回数の多い言葉をランキングにして、ワードクラウドにしてみた。
+    </p>
+
+    <p>
+        ワードクラウドは、歌詞の意味を自動的に解釈するものではない。
+        けれど、実際に並べてみると、普段歌詞を読んでいるだけではあまり意識していなかった言葉が、
+        思いがけず大きく表示されていることもある。
+    </p>
+
+    <p>
+        このランキングやワードクラウドを見て、
+        「こんな言葉が多いんだ」
+        「この言葉は、どんな曲で使われているんだろう」
+        など、何か気づくことがあれば面白いと思う。
+    </p>
+
+    <p>
+        私自身も、ここから気になった言葉をあらためて歌詞の中で探してみたいと思っている。
+    </p>
+
+    </div>
+
+    <div class="section-break"></div>
+    <div class="small-section">
+    <h3>分析方法</h3>
+
+    <p>
+        今回の分析では、Laputaの歌詞データをCSV形式で整理し、そのデータをPythonで処理した。
+    </p>
+
+    <h3>1．歌詞データの作成</h3>
+
+    <p>
+        分析対象となった110曲の歌詞をCSVに入力し、分析用のデータとしてまとめた。
+    </p>
+
+    <h3>2．形態素解析</h3>
+
+    <p>
+        Pythonの<strong>Janome</strong>を使用して歌詞を単語単位に分割した。
+    </p>
+
+    <p>
+        その際、活用によって形が変わる単語については、基本形に戻して集計した。
+    </p>
+
+    <p>
+        例えば、「見る」「見た」などを別々の単語として数えるのではなく、
+        基本形にまとめて集計することで、言葉の出現傾向を見やすくしている。
+    </p>
+
+    <h3>3．品詞による分類</h3>
+
+    <p>
+        形態素解析によって分類された単語のうち、今回の分析では主に、
+    </p>
+
+    <ul>
+        <li>名詞</li>
+        <li>動詞</li>
+        <li>形容詞</li>
+    </ul>
+
+    <p>
+        を抽出した。
+    </p>
+
+    <p>
+        一方で、「僕」「君」「私」「あなた」などの人称代名詞や、
+        「こと」「もの」「よう」など、歌詞の分析上あまり特徴を示さないと考えられる一般的な語は、
+        ストップワードとして除外している。
+    </p>
+
+    <h3>4．出現回数の集計</h3>
+
+    <p>
+        抽出した単語を集計し、それぞれの出現回数をランキング化した。
+    </p>
+
+    <p>
+        総合ランキングのほか、<strong>名詞・動詞・形容詞ごとのランキング</strong>も作成している。
+    </p>
+
+    <h3>5．英単語の分析</h3>
+
+    <p>
+        日本語の単語とは別に、歌詞に登場する<strong>英単語についても抽出・集計</strong>した。
+    </p>
+
+    <h3>6．ワードクラウドによる可視化</h3>
+
+    <p>
+        集計した出現回数をもとに、Pythonの<strong>WordCloud</strong>を使用して可視化した。
+    </p>
+
+    <p>
+        出現回数の多い単語ほど大きく表示されるため、ランキング表とは違った形で、
+        歌詞全体の言葉の傾向を見ることができる。
+    </p>
+
+    <h3>使用した分析ツール</h3>
+
+    <p>
+        今回の分析では、以下のツール・ライブラリを使用した。
+    </p>
+
+    <ul>
+        <li><strong>Python 3.9.6</strong></li>
+        <li><strong>pandas</strong> — CSVデータの読み込み・整理・集計</li>
+        <li><strong>Janome</strong> — 日本語の形態素解析</li>
+        <li><strong>WordCloud</strong> — ワードクラウドの生成</li>
+        <li><strong>Counter</strong> — 単語の出現回数の集計</li>
+        <li><strong>re</strong> — 不要な文字や記号の除去</li>
+        <li><strong>Pathlib</strong> — ファイルの読み込み・保存</li>
+    </ul>
+
+    <p>
+        実際の分析では、これらをPythonのコードで組み合わせ、
+        歌詞データの読み込みから単語の抽出、集計、ランキングのCSV保存、
+        ワードクラウドの画像生成までを行っている。
+    </p>
+    </div>
+
+</main>
+
+</body>
+</html>

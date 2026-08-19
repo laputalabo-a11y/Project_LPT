@@ -447,3 +447,199 @@ footer p {
         width: 760px;
     }
 }
+
+
+/* =========================================================
+   スマートフォン表示
+   1024px以下では、PC版の2カラムを縦型に切り替える
+   ========================================================= */
+
+@media screen and (max-width: 1024px),
+       screen and (max-device-width: 1024px) {
+
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    body {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .site {
+        width: 100%;
+        margin: 0;
+        border: none;
+    }
+
+    header {
+        padding: 16px 12px 14px;
+    }
+
+    header h1 {
+        font-size: 34px;
+        letter-spacing: 3px;
+        white-space: nowrap;
+    }
+
+    .site-subtitle {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    /*
+     * スマホではMENUを横幅いっぱいにして、
+     * その下に本文を表示する。
+     */
+    .layout {
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 14px 16px 18px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        box-sizing: border-box;
+    }
+
+    .menu h2 {
+        margin: 0 0 12px;
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .menu > a {
+        display: inline-block;
+        margin: 5px 12px 5px 0;
+        font-size: 16px;
+    }
+
+    .menu h3 {
+        display: inline-block;
+        margin: 14px 10px 5px 0;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 14px;
+        margin: 0 0 5px;
+    }
+
+    .menu li {
+        margin: 7px 0;
+        padding-left: 10px;
+    }
+
+    .menu li a {
+        font-size: 15px;
+    }
+
+    .content {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .content-frame {
+        width: 100%;
+        height: auto;
+        min-height: 1000px;
+        overflow: visible;
+    }
+
+    .frame-content {
+        width: 100%;
+        max-width: none;
+        padding: 24px 16px 50px;
+        box-sizing: border-box;
+    }
+
+    .frame-content h2 {
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+
+    .frame-content h3 {
+        margin-top: 30px;
+        padding-left: 9px;
+        font-size: 17px;
+    }
+
+    .frame-content p {
+        line-height: 1.85;
+    }
+
+    .analysis-page {
+        line-height: 1.85;
+    }
+
+    .figure {
+        width: 100%;
+        margin: 25px auto 35px;
+    }
+
+    .figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    .figure figcaption {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /*
+     * 表は無理に縮小せず、横スクロールできるようにする。
+     * 表の内容が潰れて読めなくなるのを防ぐ。
+     */
+    .table-wrap {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table.analysis-table {
+        width: 760px;
+        max-width: none;
+        font-size: 12px;
+    }
+
+    .note,
+    .data-source {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .data-source {
+        padding: 14px;
+    }
+
+    .external-links {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .link-banner {
+        max-width: 150px;
+    }
+
+    footer {
+        padding: 12px 8px;
+    }
+
+    .last-update {
+        font-size: 11px;
+    }
+}

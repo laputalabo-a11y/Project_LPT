@@ -6,15 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Project LPT</title>
+<link rel="stylesheet" href="css/style.css?v=2">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* Project LPT: 上部タイトルとメニューを固定 */
+.site > header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #000;
+}
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap"
-        rel="stylesheet">
+/* メニューは画面上部に固定し、長くなった場合はメニュー内だけスクロール */
+.menu {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+    z-index: 900;
+}
 
-    <link rel="stylesheet" href="css/style.css">
+/* タイトルはサイトで使用しているCormorant Garamond */
+header h1 {
+    font-family: "Cormorant Garamond", "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "Times New Roman", serif;
+}
+</style>
+
+
+<style>
+@media (max-width: 1024px) {
+    .site > header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #000;
+    }
+
+    .menu {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        z-index: auto;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -38,37 +75,37 @@
             <ul>
                 <li><a href="analysis/wordcloud.html" target="contentFrame">ワードクラウド</a></li>
                 <li><a href="analysis/authors.html" target="contentFrame">作詞・作曲分析</a></li>
-                <li><a href="analysis/shazam.html" target="contentFrame">Shazam分析</a></li>
-                <li><a href="analysis/other.html" target="contentFrame">その他分析</a></li>
+                <li><a href="analysis/shazam.html" target="contentFrame">Shazam分析🚧</a></li>
+                <li><a href="analysis/other.html" target="contentFrame">その他分析🚧</a></li>
             </ul>
 
             <h3>記事分析</h3>
             <ul>
-                <li><a href="articles/books.html" target="contentFrame">書籍からの分析</a></li>
-                <li><a href="articles/2ch5ch.html" target="contentFrame">2ch・5ch分析</a></li>
+                <li><a href="articles/books.html" target="contentFrame">書籍からの分析🚧</a></li>
+                <li><a href="articles/2ch5ch.html" target="contentFrame">2ch・5ch分析🚧</a></li>
             </ul>
 
-            <h3>aki Solo Work</h3>
+            <h3>aki Solo Works</h3>
             <ul>
-                <li><a href="aki-solo/songs.html" target="contentFrame">楽曲分析</a></li>
-                <li><a href="aki-solo/twitter.html" target="contentFrame">Twitter分析</a></li>
-                <li><a href="aki-solo/other.html" target="contentFrame">その他</a></li>
+                <li><a href="aki-solo/songs.html" target="contentFrame">楽曲分析🚧</a></li>
+                <li><a href="aki-solo/twitter.html" target="contentFrame">Twitter分析🚧</a></li>
+                <li><a href="aki-solo/other.html" target="contentFrame">その他分析🚧</a></li>
             </ul>
 
             <h3>Garage</h3>
             <ul>
-                <li><a href="garage.html" target="contentFrame">akiの愛車</a></li>
+                <li><a href="garage.html" target="contentFrame">akiの愛車🚧</a></li>
             </ul>
 
             <h3>研究資料</h3>
             <ul>
-                <li><a href="albums.html" target="contentFrame">アルバム一覧</a></li>
-                <li><a href="references.html" target="contentFrame">参考文献一覧</a></li>
+                <li><a href="albums.html" target="contentFrame">アルバム一覧🚧</a></li>
+                <li><a href="references.html" target="contentFrame">参考文献一覧🚧</a></li>
             </ul>
 
-            <a href="articles/column.html" target="contentFrame">管理人のコラム</a>
-            <a href="about.html" target="contentFrame">ABOUT PROJECT LPT</a>
-            <a href="bbs.html" target="contentFrame">BBS（工事中）</a>
+            <a href="articles/column.html" target="contentFrame">管理人のコラム🚧</a>
+            <a href="about.html" target="contentFrame">ABOUT Project LPT</a>
+            <a href="bbs.html" target="contentFrame">BBS🚧</a>
 
         </nav>
 
