@@ -10,7 +10,7 @@
     --tomoi: #164A7A;
     --graph-bg: #282828;
     --site-bg: #000000;
-    --accent: #C8A96B;
+    --accent: #990000;
     --text-main: #CCCCCC;
     --text-muted: #888888;
     --border: #555555;
@@ -21,7 +21,7 @@ body {
     padding: 0;
     background-color: var(--site-bg);
     color: var(--text-main);
-    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Osaka, sans-serif;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Hiragino Mincho Pro", serif;
     font-size: 14px;
 }
 
