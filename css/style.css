@@ -431,47 +431,43 @@ footer p {
     margin: 8px 0;
 }
 
-/* 管理人欄だけ少しコンパクトに */
-.manager h2 {
-    font-size: 17px;
-}
 
-.manager-name {
-    margin: 12px 0 2px;
-    font-size: 17px;
-    font-weight: normal;
-}
+/* =========================================================
+   管理人欄
+   ========================================================= */
 
-.manager-name a {
-    color: #fff;
-    text-decoration: none;
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-/* 管理人欄だけ調整 */
 .manager {
     text-align: center;
-    border-left: none;
-    padding-left: 0;
+    border-left: none !important;
+    padding-left: 0 !important;
 }
 
-/* 「管理人」 */
-.manager h2 {
-    font-size: 16px;
-    margin-bottom: 18px;
+/* 管理人 */
+.frame-content .manager h2 {
+    font-size: 20px !important;
+    margin: 0 0 20px;
+    padding: 0 !important;
+    border-left: none !important;
 }
 
-/* 「みょん」 */
-.manager-name {
-    font-size: 15px;
+/* みょん */
+.frame-content .manager .manager-name {
+    font-size: 17px !important;
     font-weight: normal;
-    margin: 0 0 10px;
+    margin: 0 0 12px;
 }
 
-/* 「Project LPT 管理人」 */
-.manager div:last-child {
-    font-size: 14px;
+/* みょんのリンク */
+.frame-content .manager .manager-name a {
+    color: var(--text-main);
+    font-size: inherit;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* Project LPT 管理人 */
+.frame-content .manager div:last-child {
+    font-size: 15px !important;
 }
 
 
