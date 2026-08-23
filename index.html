@@ -67,6 +67,45 @@ header h1 {
 
         <nav class="menu">
 
+
+            <select class="mobile-menu" onchange="changePage(this)">
+    <option value="">▼ MENU ▼</option>
+
+    <option value="home.html">TOP</option>
+
+    <option disabled>────────────</option>
+    <option disabled>＜楽曲分析＞</option>
+    <option value="analysis/wordcloud.html">├ ワードクラウド</option>
+    <option value="analysis/authors.html">├ 作詞・作曲分析</option>
+    <option value="analysis/shazam.html">├ Shazam分析 🚧</option>
+    <option value="analysis/other.html">└ その他分析 🚧</option>
+
+    <option disabled>────────────</option>
+    <option disabled>＜記事分析＞</option>
+    <option value="articles/books.html">├ 書籍からの分析 🚧</option>
+    <option value="articles/2ch5ch.html">└ 2ch・5ch分析 🚧</option>
+
+    <option disabled>────────────</option>
+    <option disabled>＜aki Solo Works＞</option>
+    <option value="aki-solo/songs.html">├ 楽曲分析 🚧</option>
+    <option value="aki-solo/twitter.html">├ Twitter分析 🚧</option>
+    <option value="aki-solo/other.html">└ その他分析 🚧</option>
+
+    <option disabled>────────────</option>
+    <option disabled>＜Garage＞</option>
+    <option value="garage.html">└ akiの愛車</option>
+
+    <option disabled>────────────</option>
+    <option disabled>＜研究資料＞</option>
+    <option value="albums.html">├ アルバム一覧</option>
+    <option value="references.html">└ 参考文献一覧</option>
+
+    <option disabled>────────────</option>
+
+    <option value="articles/column.html">管理人のコラム</option>
+    <option value="about.html">ABOUT PROJECT LPT</option>
+    <option value="bbs.html">BBS（工事中）</option>
+</select>
             <h2>MENU</h2>
 
             <a href="home.html" target="contentFrame">HOME</a>
@@ -161,6 +200,16 @@ header h1 {
     </footer>
 
 </div>
+
+<script>
+function changePage(select) {
+    if (select.value) {
+        document.querySelector(
+            'iframe[name="contentFrame"]'
+        ).src = select.value;
+    }
+}
+</script>
 
 </body>
 </html>

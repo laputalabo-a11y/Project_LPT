@@ -188,7 +188,7 @@ header h1 {
 
 .frame-content h3 {
     color: var(--accent);
-    border-left: 3px solid var(--accent);
+    border-left: 3px solid var(--aki);
     padding-left: 10px;
     margin-top: 42px;
 }
@@ -454,9 +454,56 @@ footer p {
    1024px以下では、PC版の2カラムを縦型に切り替える
    ========================================================= */
 
+/* スマホ用プルダウンメニュー */
+.mobile-menu {
+    display: none;
+}
+
 @media screen and (max-width: 1024px),
        screen and (max-device-width: 1024px) {
 
+        /* =========================
+   スマホ用プルダウンMENU
+   ========================= */
+
+.mobile-menu {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+
+    background: #111;
+    color: #fff;
+
+    border: 1px solid var(--border);
+
+    font-family:
+        "Hiragino Mincho ProN",
+        "YuMincho",
+        "Yu Mincho",
+        serif;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+
+/* スマホでは従来のメニューを隠す */
+
+.menu h2,
+.menu > a,
+.menu h3,
+.menu ul {
+    display: none;
+}
+
+
+/* メニュー部分をコンパクトに */
+
+.menu {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+}
     html,
     body {
         width: 100%;
