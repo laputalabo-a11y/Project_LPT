@@ -64,7 +64,48 @@ header h1 {
     </header>
 
     <div class="layout">
+<div class="mobile-menu">
 
+    <select onchange="if(this.value) window.frames['contentFrame'].location.href=this.value">
+
+        <option value="">▼ MENU</option>
+
+        <option value="home.html">HOME</option>
+
+        <optgroup label="楽曲分析">
+            <option value="analysis/wordcloud.html">ワードクラウド</option>
+            <option value="analysis/authors.html">作詞・作曲分析</option>
+            <option value="analysis/shazam.html">Shazam分析 🚧</option>
+            <option value="analysis/other.html">その他分析 🚧</option>
+        </optgroup>
+
+        <optgroup label="記事分析">
+            <option value="articles/books.html">書籍からの分析 🚧</option>
+            <option value="articles/2ch5ch.html">2ch・5ch分析 🚧</option>
+        </optgroup>
+
+        <optgroup label="aki Solo Works">
+            <option value="aki-solo/songs.html">楽曲分析 🚧</option>
+            <option value="aki-solo/twitter.html">Twitter分析 🚧</option>
+            <option value="aki-solo/other.html">その他分析 🚧</option>
+        </optgroup>
+
+        <optgroup label="Garage">
+            <option value="garage.html">akiの愛車 🚧</option>
+        </optgroup>
+
+        <optgroup label="研究資料">
+            <option value="albums.html">アルバム一覧 🚧</option>
+            <option value="references.html">参考文献一覧 🚧</option>
+        </optgroup>
+
+        <option value="articles/column.html">管理人のコラム 🚧</option>
+        <option value="about.html">ABOUT Project LPT</option>
+        <option value="bbs.html">BBS 🚧</option>
+
+    </select>
+
+</div>
         <nav class="menu">
 
 
@@ -151,10 +192,11 @@ header h1 {
         <main class="content">
 
             <iframe
-                class="content-frame"
-                name="contentFrame"
-                src="home.html"
-                title="Project LPT content">
+            id="contentFrame"
+            class="content-frame"
+            name="contentFrame"
+            src="home.html"
+            title="Project LPT content">
             </iframe>
 
         </main>
@@ -209,6 +251,8 @@ function changePage(select) {
         ).src = select.value;
     }
 }
+
+
 </script>
 
 </body>
