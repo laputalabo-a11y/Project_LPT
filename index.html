@@ -6,51 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Project LPT</title>
-<link rel="stylesheet" href="css/style.css?v=2">
 
-<style>
-/* Project LPT: 上部タイトルとメニューを固定 */
-.site > header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #000;
-}
+    <link rel="stylesheet" href="css/style.css?v=2">
 
-/* メニューは画面上部に固定し、長くなった場合はメニュー内だけスクロール */
-.menu {
-    position: sticky;
-    top: 0;
-    align-self: flex-start;
-    max-height: calc(100vh - 20px);
-    overflow-y: auto;
-    z-index: 900;
-}
+    <style>
+        /* Project LPT: 上部タイトルとメニューを固定 */
+        .site > header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #000;
+        }
 
-/* タイトルはサイトで使用しているCormorant Garamond */
-header h1 {
-    font-family: "Cormorant Garamond", "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "Times New Roman", serif;
-}
-</style>
+        /* メニューは画面上部に固定し、長くなった場合はメニュー内だけスクロール */
+        .menu {
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            max-height: calc(100vh - 20px);
+            overflow-y: auto;
+            z-index: 900;
+        }
 
+        /* タイトル */
+        header h1 {
+            font-family:
+                "Cormorant Garamond",
+                "Hiragino Mincho ProN",
+                "YuMincho",
+                "Yu Mincho",
+                "Times New Roman",
+                serif;
+        }
 
-<style>
-@media (max-width: 1024px) {
-    .site > header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: #000;
-    }
+        /* スマホ・タブレット */
+        @media (max-width: 1024px) {
 
-    .menu {
-        position: static;
-        max-height: none;
-        overflow: visible;
-        z-index: auto;
-    }
-}
-</style>
+            .site > header {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: #000;
+            }
+
+            .menu {
+                position: static;
+                max-height: none;
+                overflow: visible;
+                z-index: auto;
+            }
+
+        }
+    </style>
 
 </head>
 
@@ -58,151 +65,311 @@ header h1 {
 
 <div class="site">
 
+    <!-- ヘッダー -->
     <header>
         <h1>Project LPT</h1>
         <p class="site-subtitle">Laputa Analysis Project</p>
     </header>
 
+
     <div class="layout">
-<div class="mobile-menu">
 
-    <select onchange="if(this.value) window.frames['contentFrame'].location.href=this.value">
 
-        <option value="">▼ MENU</option>
+        <!-- モバイル用メニュー -->
+        <div class="mobile-menu">
 
-        <option value="home.html">HOME</option>
+            <select onchange="changePage(this)">
 
-        <optgroup label="楽曲分析">
-            <option value="analysis/wordcloud.html">ワードクラウド</option>
-            <option value="analysis/authors.html">作詞・作曲分析</option>
-            <option value="analysis/shazam.html">Shazam分析 🚧</option>
-            <option value="analysis/other.html">その他分析 🚧</option>
-        </optgroup>
+                <option value="">▼ MENU</option>
 
-        <optgroup label="記事分析">
-            <option value="articles/books.html">書籍からの分析 🚧</option>
-            <option value="articles/2ch5ch.html">2ch・5ch分析 🚧</option>
-        </optgroup>
+                <option value="home.html">HOME</option>
 
-        <optgroup label="aki Solo Works">
-            <option value="aki-solo/songs.html">楽曲分析 🚧</option>
-            <option value="aki-solo/twitter.html">Twitter分析 🚧</option>
-            <option value="aki-solo/other.html">その他分析 🚧</option>
-        </optgroup>
+                <optgroup label="楽曲分析">
+                    <option value="analysis/wordcloud.html">ワードクラウド</option>
+                    <option value="analysis/authors.html">作詞・作曲分析</option>
+                    <option value="analysis/shazam.html">Shazam分析 🚧</option>
+                    <option value="analysis/other.html">その他分析 🚧</option>
+                </optgroup>
 
-        <optgroup label="Garage">
-            <option value="garage.html">akiの愛車 🚧</option>
-        </optgroup>
+                <optgroup label="記事分析">
+                    <option value="articles/books.html">書籍からの分析 🚧</option>
+                    <option value="articles/2ch5ch.html">2ch・5ch分析 🚧</option>
+                </optgroup>
 
-        <optgroup label="研究資料">
-            <option value="albums.html">アルバム一覧 🚧</option>
-            <option value="references.html">参考文献一覧 🚧</option>
-        </optgroup>
+                <optgroup label="aki Solo Works">
+                    <option value="aki-solo/songs.html">楽曲分析 🚧</option>
+                    <option value="aki-solo/twitter.html">Twitter分析 🚧</option>
+                    <option value="aki-solo/other.html">その他分析 🚧</option>
+                </optgroup>
 
-        <option value="articles/column.html">管理人のコラム 🚧</option>
-        <option value="about.html">ABOUT Project LPT</option>
-        <option value="https://projectlpt.bbs.wox.cc">BBS</option>
+                <optgroup label="Garage">
+                    <option value="garage.html">akiの愛車 🚧</option>
+                </optgroup>
 
-    </select>
+                <optgroup label="研究資料">
+                    <option value="albums.html">アルバム一覧 🚧</option>
+                    <option value="references.html">参考文献一覧 🚧</option>
+                </optgroup>
 
-</div>
+                <option value="articles/column.html">管理人のコラム 🚧</option>
+                <option value="about.html">ABOUT Project LPT</option>
+
+                <!-- BBSだけ新しいタブ -->
+                <option
+                    value="https://projectlpt.bbs.wox.cc"
+                    data-external="true">
+                    BBS
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PC・タブレット用メニュー -->
         <nav class="menu">
 
-
             <select class="mobile-menu" onchange="changePage(this)">
-    <option value="">▼ MENU ▼</option>
 
-    <option value="home.html">TOP</option>
+                <option value="">▼ MENU ▼</option>
 
-    <option disabled>────────────</option>
-    <option disabled>＜楽曲分析＞</option>
-    <option value="analysis/wordcloud.html">├ ワードクラウド</option>
-    <option value="analysis/authors.html">├ 作詞・作曲分析</option>
-    <option value="analysis/shazam.html">├ Shazam分析 🚧</option>
-    <option value="analysis/other.html">└ その他分析 🚧</option>
+                <option value="home.html">TOP</option>
 
-    <option disabled>────────────</option>
-    <option disabled>＜記事分析＞</option>
-    <option value="articles/books.html">├ 書籍からの分析 🚧</option>
-    <option value="articles/2ch5ch.html">└ 2ch・5ch分析 🚧</option>
+                <option disabled>────────────</option>
+                <option disabled>＜楽曲分析＞</option>
 
-    <option disabled>────────────</option>
-    <option disabled>＜aki Solo Works＞</option>
-    <option value="aki-solo/songs.html">├ 楽曲分析 🚧</option>
-    <option value="aki-solo/twitter.html">├ Twitter分析 🚧</option>
-    <option value="aki-solo/other.html">└ その他分析 🚧</option>
+                <option value="analysis/wordcloud.html">
+                    ├ ワードクラウド
+                </option>
 
-    <option disabled>────────────</option>
-    <option disabled>＜Garage＞</option>
-    <option value="garage.html">└ akiの愛車</option>
+                <option value="analysis/authors.html">
+                    ├ 作詞・作曲分析
+                </option>
 
-    <option disabled>────────────</option>
-    <option disabled>＜研究資料＞</option>
-    <option value="albums.html">├ アルバム一覧</option>
-    <option value="references.html">└ 参考文献一覧</option>
+                <option value="analysis/shazam.html">
+                    ├ Shazam分析 🚧
+                </option>
 
-    <option disabled>────────────</option>
+                <option value="analysis/other.html">
+                    └ その他分析 🚧
+                </option>
 
-    <option value="articles/column.html">管理人のコラム</option>
-    <option value="about.html">ABOUT PROJECT LPT</option>
-    <option value="https://projectlpt.bbs.wox.cc">BBS</option>
-</select>
+                <option disabled>────────────</option>
+                <option disabled>＜記事分析＞</option>
+
+                <option value="articles/books.html">
+                    ├ 書籍からの分析 🚧
+                </option>
+
+                <option value="articles/2ch5ch.html">
+                    └ 2ch・5ch分析 🚧
+                </option>
+
+                <option disabled>────────────</option>
+                <option disabled>＜aki Solo Works＞</option>
+
+                <option value="aki-solo/songs.html">
+                    ├ 楽曲分析 🚧
+                </option>
+
+                <option value="aki-solo/twitter.html">
+                    ├ Twitter分析 🚧
+                </option>
+
+                <option value="aki-solo/other.html">
+                    └ その他分析 🚧
+                </option>
+
+                <option disabled>────────────</option>
+                <option disabled>＜Garage＞</option>
+
+                <option value="garage.html">
+                    └ akiの愛車
+                </option>
+
+                <option disabled>────────────</option>
+                <option disabled>＜研究資料＞</option>
+
+                <option value="albums.html">
+                    ├ アルバム一覧
+                </option>
+
+                <option value="references.html">
+                    └ 参考文献一覧
+                </option>
+
+                <option disabled>────────────</option>
+
+                <option value="articles/column.html">
+                    管理人のコラム
+                </option>
+
+                <option value="about.html">
+                    ABOUT PROJECT LPT
+                </option>
+
+                <!-- BBSだけ新しいタブ -->
+                <option
+                    value="https://projectlpt.bbs.wox.cc"
+                    data-external="true">
+                    BBS
+                </option>
+
+            </select>
+
+
             <h2>MENU</h2>
 
             <a href="home.html" target="contentFrame">HOME</a>
 
+
             <h3>楽曲分析</h3>
+
             <ul>
-                <li><a href="analysis/wordcloud.html" target="contentFrame">ワードクラウド</a></li>
-                <li><a href="analysis/authors.html" target="contentFrame">作詞・作曲分析</a></li>
-                <li><a href="analysis/shazam.html" target="contentFrame">Shazam分析🚧</a></li>
-                <li><a href="analysis/other.html" target="contentFrame">その他分析🚧</a></li>
+                <li>
+                    <a href="analysis/wordcloud.html"
+                       target="contentFrame">
+                        ワードクラウド
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analysis/authors.html"
+                       target="contentFrame">
+                        作詞・作曲分析
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analysis/shazam.html"
+                       target="contentFrame">
+                        Shazam分析🚧
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analysis/other.html"
+                       target="contentFrame">
+                        その他分析🚧
+                    </a>
+                </li>
             </ul>
+
 
             <h3>記事分析</h3>
+
             <ul>
-                <li><a href="articles/books.html" target="contentFrame">書籍からの分析🚧</a></li>
-                <li><a href="articles/2ch5ch.html" target="contentFrame">2ch・5ch分析🚧</a></li>
+                <li>
+                    <a href="articles/books.html"
+                       target="contentFrame">
+                        書籍からの分析🚧
+                    </a>
+                </li>
+
+                <li>
+                    <a href="articles/2ch5ch.html"
+                       target="contentFrame">
+                        2ch・5ch分析🚧
+                    </a>
+                </li>
             </ul>
+
 
             <h3>aki Solo Works</h3>
+
             <ul>
-                <li><a href="aki-solo/songs.html" target="contentFrame">楽曲分析🚧</a></li>
-                <li><a href="aki-solo/twitter.html" target="contentFrame">Twitter分析🚧</a></li>
-                <li><a href="aki-solo/other.html" target="contentFrame">その他分析🚧</a></li>
+                <li>
+                    <a href="aki-solo/songs.html"
+                       target="contentFrame">
+                        楽曲分析🚧
+                    </a>
+                </li>
+
+                <li>
+                    <a href="aki-solo/twitter.html"
+                       target="contentFrame">
+                        Twitter分析🚧
+                    </a>
+                </li>
+
+                <li>
+                    <a href="aki-solo/other.html"
+                       target="contentFrame">
+                        その他分析🚧
+                    </a>
+                </li>
             </ul>
+
 
             <h3>Garage</h3>
+
             <ul>
-                <li><a href="garage.html" target="contentFrame">akiの愛車🚧</a></li>
+                <li>
+                    <a href="garage.html"
+                       target="contentFrame">
+                        akiの愛車🚧
+                    </a>
+                </li>
             </ul>
+
 
             <h3>研究資料</h3>
+
             <ul>
-                <li><a href="albums.html" target="contentFrame">アルバム一覧🚧</a></li>
-                <li><a href="references.html" target="contentFrame">参考文献一覧🚧</a></li>
+                <li>
+                    <a href="albums.html"
+                       target="contentFrame">
+                        アルバム一覧🚧
+                    </a>
+                </li>
+
+                <li>
+                    <a href="references.html"
+                       target="contentFrame">
+                        参考文献一覧🚧
+                    </a>
+                </li>
             </ul>
 
-            <a href="articles/column.html" target="contentFrame">管理人のコラム🚧</a>
-            <a href="about.html" target="contentFrame">ABOUT Project LPT</a>
-            <a href="https://projectlpt.bbs.wox.cc" target="contentFrame">BBS</a>
+
+            <a href="articles/column.html"
+               target="contentFrame">
+                管理人のコラム🚧
+            </a>
+
+            <a href="about.html"
+               target="contentFrame">
+                ABOUT Project LPT
+            </a>
+
+
+            <!-- BBS：新しいタブで開く -->
+            <a href="https://projectlpt.bbs.wox.cc"
+               target="_blank"
+               rel="noopener noreferrer">
+                BBS
+            </a>
 
         </nav>
 
+
+        <!-- メインコンテンツ -->
         <main class="content">
 
             <iframe
-            id="contentFrame"
-            class="content-frame"
-            name="contentFrame"
-            src="home.html"
-            title="Project LPT content">
+                id="contentFrame"
+                class="content-frame"
+                name="contentFrame"
+                src="home.html"
+                title="Project LPT content">
             </iframe>
 
         </main>
 
     </div>
 
+
+    <!-- フッター -->
     <footer>
 
         <div class="external-links">
@@ -211,28 +378,36 @@ header h1 {
                 href="https://laputa-all-burst.jp/index.html"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 <img
                     src="images/allburst.png"
                     alt="Laputa ALL BURST"
                     class="link-banner">
+
             </a>
+
 
             <a
                 href="https://vk.gy/artists/laputa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-link">
+
                 vk.gy - Laputa
+
             </a>
+
 
             <a
                 href="https://x.com/Project_LPT/"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 <img
                     src="images/x.jpeg"
                     alt="Project LPT on X"
                     class="link-banner">
+
             </a>
 
         </div>
@@ -243,15 +418,36 @@ header h1 {
 
 </div>
 
+
 <script>
+
 function changePage(select) {
-    if (select.value) {
+
+    if (!select.value) return;
+
+    const selectedOption =
+        select.options[select.selectedIndex];
+
+    /* BBSなど外部リンクの場合 */
+    if (selectedOption.dataset.external === "true") {
+
+        window.open(
+            select.value,
+            "_blank"
+        );
+
+    } else {
+
         document.querySelector(
             'iframe[name="contentFrame"]'
         ).src = select.value;
-    }
-}
 
+    }
+
+    /* 選択後にMENU表示へ戻す */
+    select.value = "";
+
+}
 
 </script>
 
