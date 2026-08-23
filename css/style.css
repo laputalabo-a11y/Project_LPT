@@ -431,6 +431,24 @@ footer p {
     margin: 8px 0;
 }
 
+/* 管理人欄だけ少しコンパクトに */
+.manager h2 {
+    font-size: 17px;
+}
+
+.manager-name {
+    margin: 12px 0 2px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.manager-name a {
+    color: #fff;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 
 /* =========================================================
    スマートフォン / タブレット
