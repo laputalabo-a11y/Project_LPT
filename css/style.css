@@ -82,12 +82,12 @@ header h1 {
 .menu > a {
     display: block;
     margin: 15px 0;
-    color: var(--aki);
+    color: var(--accent);
     text-decoration: none;
 }
 
 .menu > a:visited {
-    color: var(--aki);
+    color: var(--accent);
 }
 
 .menu > a:hover {
