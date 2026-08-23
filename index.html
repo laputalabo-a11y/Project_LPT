@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css?v=2">
 
     <style>
-        /* Project LPT: 上部タイトルとメニューを固定 */
+        /* 上部タイトルを固定 */
         .site > header {
             position: sticky;
             top: 0;
@@ -18,7 +18,7 @@
             background: #000;
         }
 
-        /* メニューは画面上部に固定し、長くなった場合はメニュー内だけスクロール */
+        /* PC用メニュー */
         .menu {
             position: sticky;
             top: 0;
@@ -39,6 +39,14 @@
                 serif;
         }
 
+        /* BBSリンクの色 */
+        .bbs-link,
+        .bbs-link:visited,
+        .bbs-link:hover,
+        .bbs-link:active {
+            color: #990000;
+        }
+
         /* スマホ・タブレット */
         @media (max-width: 1024px) {
 
@@ -55,7 +63,6 @@
                 overflow: visible;
                 z-index: auto;
             }
-
         }
     </style>
 
@@ -74,11 +81,10 @@
 
     <div class="layout">
 
-
-        <!-- モバイル用メニュー -->
+        <!-- スマホ用メニュー -->
         <div class="mobile-menu">
 
-            <select onchange="changePage(this)">
+            <select onchange="if(this.value) window.frames['contentFrame'].location.href=this.value">
 
                 <option value="">▼ MENU</option>
 
@@ -114,113 +120,27 @@
                 <option value="articles/column.html">管理人のコラム 🚧</option>
                 <option value="about.html">ABOUT Project LPT</option>
 
-                <!-- BBSだけ新しいタブ -->
-                <option
-                    value="https://projectlpt.bbs.wox.cc"
-                    data-external="true">
-                    BBS
-                </option>
-
             </select>
+
+            <!-- スマホ用BBS -->
+            <a href="https://projectlpt.bbs.wox.cc"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="bbs-link">
+                BBS
+            </a>
 
         </div>
 
 
-        <!-- PC・タブレット用メニュー -->
+        <!-- PC用メニュー -->
         <nav class="menu">
-
-            <select class="mobile-menu" onchange="changePage(this)">
-
-                <option value="">▼ MENU ▼</option>
-
-                <option value="home.html">TOP</option>
-
-                <option disabled>────────────</option>
-                <option disabled>＜楽曲分析＞</option>
-
-                <option value="analysis/wordcloud.html">
-                    ├ ワードクラウド
-                </option>
-
-                <option value="analysis/authors.html">
-                    ├ 作詞・作曲分析
-                </option>
-
-                <option value="analysis/shazam.html">
-                    ├ Shazam分析 🚧
-                </option>
-
-                <option value="analysis/other.html">
-                    └ その他分析 🚧
-                </option>
-
-                <option disabled>────────────</option>
-                <option disabled>＜記事分析＞</option>
-
-                <option value="articles/books.html">
-                    ├ 書籍からの分析 🚧
-                </option>
-
-                <option value="articles/2ch5ch.html">
-                    └ 2ch・5ch分析 🚧
-                </option>
-
-                <option disabled>────────────</option>
-                <option disabled>＜aki Solo Works＞</option>
-
-                <option value="aki-solo/songs.html">
-                    ├ 楽曲分析 🚧
-                </option>
-
-                <option value="aki-solo/twitter.html">
-                    ├ Twitter分析 🚧
-                </option>
-
-                <option value="aki-solo/other.html">
-                    └ その他分析 🚧
-                </option>
-
-                <option disabled>────────────</option>
-                <option disabled>＜Garage＞</option>
-
-                <option value="garage.html">
-                    └ akiの愛車
-                </option>
-
-                <option disabled>────────────</option>
-                <option disabled>＜研究資料＞</option>
-
-                <option value="albums.html">
-                    ├ アルバム一覧
-                </option>
-
-                <option value="references.html">
-                    └ 参考文献一覧
-                </option>
-
-                <option disabled>────────────</option>
-
-                <option value="articles/column.html">
-                    管理人のコラム
-                </option>
-
-                <option value="about.html">
-                    ABOUT PROJECT LPT
-                </option>
-
-                <!-- BBSだけ新しいタブ -->
-                <option
-                    value="https://projectlpt.bbs.wox.cc"
-                    data-external="true">
-                    BBS
-                </option>
-
-            </select>
-
 
             <h2>MENU</h2>
 
-            <a href="home.html" target="contentFrame">HOME</a>
+            <a href="home.html" target="contentFrame">
+                HOME
+            </a>
 
 
             <h3>楽曲分析</h3>
@@ -343,10 +263,11 @@
             </a>
 
 
-            <!-- BBS：新しいタブで開く -->
+            <!-- PC用BBS -->
             <a href="https://projectlpt.bbs.wox.cc"
                target="_blank"
-               rel="noopener noreferrer">
+               rel="noopener noreferrer"
+               class="bbs-link">
                 BBS
             </a>
 
@@ -374,39 +295,34 @@
 
         <div class="external-links">
 
-            <a
-                href="https://laputa-all-burst.jp/index.html"
-                target="_blank"
-                rel="noopener noreferrer">
+            <a href="https://laputa-all-burst.jp/index.html"
+               target="_blank"
+               rel="noopener noreferrer">
 
-                <img
-                    src="images/allburst.png"
-                    alt="Laputa ALL BURST"
-                    class="link-banner">
+                <img src="images/allburst.png"
+                     alt="Laputa ALL BURST"
+                     class="link-banner">
 
             </a>
 
 
-            <a
-                href="https://vk.gy/artists/laputa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-link">
+            <a href="https://vk.gy/artists/laputa/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-link">
 
                 vk.gy - Laputa
 
             </a>
 
 
-            <a
-                href="https://x.com/Project_LPT/"
-                target="_blank"
-                rel="noopener noreferrer">
+            <a href="https://x.com/Project_LPT/"
+               target="_blank"
+               rel="noopener noreferrer">
 
-                <img
-                    src="images/x.jpeg"
-                    alt="Project LPT on X"
-                    class="link-banner">
+                <img src="images/x.jpeg"
+                     alt="Project LPT on X"
+                     class="link-banner">
 
             </a>
 
@@ -417,39 +333,6 @@
     </footer>
 
 </div>
-
-
-<script>
-
-function changePage(select) {
-
-    if (!select.value) return;
-
-    const selectedOption =
-        select.options[select.selectedIndex];
-
-    /* BBSなど外部リンクの場合 */
-    if (selectedOption.dataset.external === "true") {
-
-        window.open(
-            select.value,
-            "_blank"
-        );
-
-    } else {
-
-        document.querySelector(
-            'iframe[name="contentFrame"]'
-        ).src = select.value;
-
-    }
-
-    /* 選択後にMENU表示へ戻す */
-    select.value = "";
-
-}
-
-</script>
 
 </body>
 </html>
