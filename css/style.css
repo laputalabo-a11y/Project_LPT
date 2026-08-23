@@ -449,6 +449,31 @@ footer p {
     font-weight: inherit;
 }
 
+/* 管理人欄だけ調整 */
+.manager {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+}
+
+/* 「管理人」 */
+.manager h2 {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+/* 「みょん」 */
+.manager-name {
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+/* 「Project LPT 管理人」 */
+.manager div:last-child {
+    font-size: 14px;
+}
+
 
 /* =========================================================
    スマートフォン / タブレット
