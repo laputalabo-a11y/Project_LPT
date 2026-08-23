@@ -432,78 +432,20 @@ footer p {
     margin: 8px 0;
 }
 
-/* 小さい画面では左MENUを少し狭くする */
-@media (max-width: 800px) {
-    .menu {
-        width: 155px;
-        padding: 15px 12px;
-    }
-
-    .frame-content {
-        padding: 25px 20px 50px;
-    }
-
-    table.analysis-table {
-        width: 760px;
-    }
-}
-
 
 /* =========================================================
-   スマートフォン表示
-   1024px以下では、PC版の2カラムを縦型に切り替える
+   スマートフォン / タブレット
+   1024px以下
+   ・PC用左MENUは完全に非表示
+   ・プルダウンMENUのみ表示
    ========================================================= */
 
-/* スマホ用プルダウンメニュー */
 .mobile-menu {
     display: none;
 }
 
-@media screen and (max-width: 1024px),
-       screen and (max-device-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
-        /* =========================
-   スマホ用プルダウンMENU
-   ========================= */
-
-.mobile-menu {
-    display: block;
-    width: 100%;
-    padding: 10px 12px;
-
-    background: #111;
-    color: #fff;
-
-    border: 1px solid var(--border);
-
-    font-family:
-        "Hiragino Mincho ProN",
-        "YuMincho",
-        "Yu Mincho",
-        serif;
-
-    font-size: 16px;
-
-    box-sizing: border-box;
-}
-
-
-/* スマホでは従来のメニューを隠す */
-
-.menu h2,
-.menu > a,
-.menu h3,
-.menu ul {
-    display: none;
-}
-
-
-/* メニュー部分をコンパクトに */
-
-.menu {
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--border);
-}
     html,
     body {
         width: 100%;
@@ -537,55 +479,48 @@ footer p {
         letter-spacing: 1px;
     }
 
-    /*
-     * スマホではMENUを横幅いっぱいにして、
-     * その下に本文を表示する。
-     */
+    /* レイアウトを縦型へ */
     .layout {
         display: block;
     }
 
+    /* PC用左MENUはスマホでは完全に消す */
     .menu {
+        display: none;
+    }
+
+    /* スマホ用プルダウンMENUのみ表示 */
+    .mobile-menu {
+        display: block;
         width: 100%;
-        padding: 14px 16px 18px;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
+        padding: 12px 16px;
         box-sizing: border-box;
+        background: var(--site-bg);
+        border-bottom: 1px solid var(--border);
     }
 
-    .menu h2 {
-        margin: 0 0 12px;
-        font-size: 15px;
-        letter-spacing: 3px;
-    }
-
-    .menu > a {
-        display: inline-block;
-        margin: 5px 12px 5px 0;
+    .mobile-menu select {
+        display: block;
+        width: 100%;
+        padding: 11px 12px;
+        box-sizing: border-box;
+        background: #111111;
+        color: var(--text-main);
+        border: 1px solid var(--border);
+        border-radius: 0;
+        font-family:
+            "Hiragino Mincho ProN",
+            "Hiragino Mincho Pro",
+            "Yu Mincho",
+            "YuMincho",
+            serif;
         font-size: 16px;
     }
 
-    .menu h3 {
-        display: inline-block;
-        margin: 14px 10px 5px 0;
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
-
-    .menu ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 14px;
-        margin: 0 0 5px;
-    }
-
-    .menu li {
-        margin: 7px 0;
-        padding-left: 10px;
-    }
-
-    .menu li a {
-        font-size: 15px;
+    .mobile-menu option,
+    .mobile-menu optgroup {
+        background: #111111;
+        color: #FFFFFF;
     }
 
     .content {
@@ -645,10 +580,7 @@ footer p {
         line-height: 1.6;
     }
 
-    /*
-     * 表は無理に縮小せず、横スクロールできるようにする。
-     * 表の内容が潰れて読めなくなるのを防ぐ。
-     */
+    /* 表は横スクロール */
     .table-wrap {
         width: 100%;
         max-width: 100%;
