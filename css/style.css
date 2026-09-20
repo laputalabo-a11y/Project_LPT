@@ -345,6 +345,18 @@ table.analysis-table tr.total {
     margin: 10px 0;
 }
 
+.counter-display a {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    line-height: 0;
+}
+
+.counter-display img {
+    display: block;
+    border: none;
+}
+
 .news {
     margin: 30px 0;
 }
@@ -529,7 +541,9 @@ footer p {
 
     /* スマホ用プルダウンMENUのみ表示 */
     .mobile-menu {
-        display: block;
+        display: flex;
+        align-items: stretch;
+        gap: 10px;
         width: 100%;
         padding: 12px 16px;
         box-sizing: border-box;
@@ -539,7 +553,8 @@ footer p {
 
     .mobile-menu select {
         display: block;
-        width: 100%;
+        flex: 1 1 0;
+        width: 0;
         padding: 11px 12px;
         box-sizing: border-box;
         background: #111111;
@@ -559,6 +574,42 @@ footer p {
     .mobile-menu optgroup {
         background: #111111;
         color: #FFFFFF;
+    }
+
+    /* スマホ用BBS：MENUと並ぶボックス */
+    .mobile-menu .bbs-link {
+        display: flex;
+        flex: 0 0 30%;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-top: 0;
+        padding: 11px 12px;
+        background: #111111;
+        border: 1px solid var(--border);
+        color: var(--text-main) !important;
+        text-align: center;
+        text-decoration: none;
+        font-family:
+            "Hiragino Mincho ProN",
+            "Hiragino Mincho Pro",
+            "Yu Mincho",
+            "YuMincho",
+            serif;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+
+    .mobile-menu .bbs-link:visited {
+        color: var(--text-main) !important;
+    }
+
+    .mobile-menu .bbs-link:hover,
+    .mobile-menu .bbs-link:active {
+        background: #111111;
+        border-color: #888888;
+        color: #FFFFFF !important;
     }
 
     .content {
@@ -659,4 +710,56 @@ footer p {
     .last-update {
         font-size: 11px;
     }
+}
+
+/* HOME カウンター */
+.counter-display a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.counter-display img {
+    display: block;
+}
+
+/* HOME プロジェクト説明 */
+.project-description {
+    text-align: center;
+}
+/* コラム記事の写真サイズ */
+.column-article .figure img {
+    width: 50vw;
+    max-width: 900px;
+}
+
+@media screen and (max-width: 1024px) {
+    .column-article .figure img {
+        width: 80vw;
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   管理人のコラム
+   ========================================================= */
+
+/* コラム記事の見出し */
+.column-article .frame-content h3 {
+    color: #FFFFFF;
+}
+
+/* コラム目次の日付 */
+.column-index .frame-content h3 {
+    color: #FFFFFF;
+}
+
+/* コラム記事へのリンク */
+.column-link {
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
+.column-link:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
 }

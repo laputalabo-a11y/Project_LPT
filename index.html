@@ -28,15 +28,12 @@
             z-index: 900;
         }
 
-        /* タイトル */
-        header h1 {
-            font-family:
-                "Cormorant Garamond",
-                "Hiragino Mincho ProN",
-                "YuMincho",
-                "Yu Mincho",
-                "Times New Roman",
-                serif;
+        /* Project LPT ロゴ */
+        header .site-logo {
+            display: block;
+            width: min(520px, 90%);
+            height: auto;
+            margin: 0 auto;
         }
 
         /* BBSリンクの色 */
@@ -74,7 +71,10 @@
 
     <!-- ヘッダー -->
     <header>
-        <h1>Project LPT</h1>
+        <img
+            src="images/project-lpt-logo.png"
+            alt="Project LPT"
+            class="site-logo">
         <p class="site-subtitle">Laputa Analysis Project</p>
     </header>
 
@@ -117,7 +117,7 @@
                     <option value="references.html">参考文献一覧 🚧</option>
                 </optgroup>
 
-                <option value="articles/column.html">管理人のコラム 🚧</option>
+                <option value="column.html">管理人のコラム</option>
                 <option value="about.html">ABOUT Project LPT</option>
 
             </select>
@@ -252,9 +252,9 @@
             </ul>
 
 
-            <a href="articles/column.html"
+            <a href="column.html"
                target="contentFrame">
-                管理人のコラム🚧
+                管理人のコラム
             </a>
 
             <a href="about.html"
