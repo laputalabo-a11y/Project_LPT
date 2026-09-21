@@ -788,3 +788,49 @@ footer p {
     font-weight: normal;
     letter-spacing: normal;
 }
+
+/* =========================================================
+   今日のQ&A
+   ========================================================= */
+
+#daily-qa {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center !important;
+}
+
+#daily-qa h3 {
+    color: var(--accent);
+    text-align: center !important;
+    border-left: none;
+    margin-bottom: 25px;
+}
+
+#daily-qa .qa-question {
+    color: var(--kouichi);
+    text-align: center !important;
+    font-weight: bold;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}
+
+#daily-qa .qa-answer {
+    color: var(--text-main);
+    text-align: center !important;
+    line-height: 1.9;
+    margin: 0 0 18px;
+}
+
+#daily-qa .qa-source {
+    color: var(--text-muted);
+    text-align: right !important;
+    font-size: 12px;
+    margin: 15px 0 0;
+    font-family: "Courier New", monospace;
+}
+
+#daily-qa .qa-error {
+    color: var(--aki);
+    text-align: center !important;
+}
