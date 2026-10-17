@@ -24,6 +24,26 @@
     height: auto;
 }
 
+/* 『COLORS』の雑誌写真だけ、本文幅より小さく表示する */
+.colors-figure-row {
+    align-items: center;
+}
+
+.colors-figure-row .figure {
+    width: 70%;
+    max-width: 620px;
+}
+
+.colors-figure-row .figure img {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .colors-figure-row .figure {
+        width: 92%;
+    }
+}
+
 .comparison-table {
     border-collapse: collapse;
 }
@@ -174,7 +194,7 @@
         そして『Skeleton Dance』についてのインタビューを読んで、思わず笑ってしまいました。
     </p>
 
-    <div class="figure-row">
+    <div class="figure-row colors-figure-row">
         <figure class="figure">
             <img src="../images/skeleton_colors_1.jpg"
                  alt="『COLORS』p.86 akiインタビュー 1">
