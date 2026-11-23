@@ -18,17 +18,35 @@
         width: 100%;
     }
 }
-.comparison-table {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
+.analysis-page h2 {
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    text-align: left;
 }
+.vocabulary-table,
+.comparison-table {
+    width: 90%;
+    margin: 25px auto 35px;
+    border-collapse: collapse;
+    color: var(--text-main);
+    background: #050505;
+    line-height: 1.7;
+}
+.vocabulary-table th,
+.vocabulary-table td,
 .comparison-table th,
 .comparison-table td {
-    border: 1pt solid #555555;
+    border: 1px solid var(--border);
+    padding: 9px 10px;
+    vertical-align: top;
+}
+.vocabulary-table th,
+.comparison-table th {
+    background: #1a1a1a;
+    color: var(--kouichi);
 }
 @media (max-width: 700px) {
+    .vocabulary-table,
     .comparison-table {
         width: 100%;
     }
@@ -72,7 +90,7 @@
 
 <h2>まずはバンド用語を調べる</h2>
 <p>曲名を考える前に、説明に使われている用語を理解する必要がありました。今回、特に気になった言葉を整理してみます。</p>
-<table>
+<table class="vocabulary-table">
 <thead><tr><th>用語</th><th>意味</th></tr></thead>
 <tbody>
 <tr><td>リフ</td><td>繰り返される特徴的な短いフレーズ。ギターリフは曲の印象を決めることが多い。</td></tr>
@@ -183,7 +201,7 @@
 
 <hr>
 <p class="small">出典：『エムガゼット』Vol.36、2001年2月号。Laputa『楽～ヘブン～園』発売前のメンバーによる楽曲解説。</p>
-<p style="text-align:center; margin-top:35px;"><a href="../magazine.html" class="text-link">← 雑誌からの分析一覧へ戻る</a></p>
+<p style="text-align:center; margin-top:35px;"><a href="../book.html" class="text-link">← 書籍からの分析一覧へ戻る</a></p>
 <p class="last-update">Last Update : 2026.11.24</p>
 </main>
 </body>
